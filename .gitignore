@@ -1,0 +1,12 @@
+# idea ignore
+.idea/
+*.iml
+
+# eclipse ignore
+.project
+.classpath
+/.settings
+
+# mvn
+target
+

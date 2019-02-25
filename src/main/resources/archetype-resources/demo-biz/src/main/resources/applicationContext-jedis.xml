@@ -1,0 +1,28 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${symbol_dollar}{redis.maxTotal}"></property>
+        <property name="maxIdle" value="${symbol_dollar}{redis.maxIdle}"/>
+        <property name="maxWaitMillis" value="${symbol_dollar}{redis.maxWait}"/>
+        <property name="testOnBorrow" value="${symbol_dollar}{redis.testOnBorrow}"/>
+    </bean>
+
+    <bean id="redisconnectionFactory"
+          class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName" value="${symbol_dollar}{redis.host}"/>
+        <property name="port" value="${symbol_dollar}{redis.port}"/>
+        <property name="password" value="${symbol_dollar}{redis.pass}"/>
+        <property name="poolConfig" ref="poolConfig"/>
+    </bean>
+
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+        <property name="connectionFactory" ref="redisconnectionFactory"/>
+    </bean>
+
+</beans>

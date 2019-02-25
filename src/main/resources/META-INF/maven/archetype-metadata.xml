@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="demo-parent"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+        <requiredProperty key="author">
+            <defaultValue>fastjrun</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>demo-config/src</directory>
+            <includes>
+                <include>**/*.xml</include>
+                <include>**/*.properties</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>__rootArtifactId___api.xml</include>
+                <include>gitignore</include>
+                <include>pom.xml</include>
+                <include>build.sh</include>
+                <include>clean.sh</include>
+                <include>README.Md</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>fastjrun-schema.xsd</include>
+                <include>__rootArtifactId__.sql</include>
+                <include>__rootArtifactId___init.sql</include>
+                <include>接口列表.md</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <modules>
+        <module id="${rootArtifactId}-api" dir="__rootArtifactId__-api" name="${rootArtifactId}-api">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-base" dir="demo-base" name="demo-base">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-bundle" dir="demo-bundle" name="demo-bundle">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-biz" dir="demo-biz" name="demo-biz">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-provider" dir="demo-provider" name="demo-provider">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/profiles</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-task" dir="demo-task" name="demo-task">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/profiles</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/bin</directory>
+                    <includes>
+                        <include>**/*.bat</include>
+                        <include>**/*.sh</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-bundle-mock" dir="demo-bundle-mock" name="demo-bundle-mock">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-provider-mock" dir="demo-provider-mock" name="demo-provider-mock">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-api-test" dir="demo-api-test" name="demo-api-test">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/profiles</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="demo-test" dir="demo-test" name="demo-test">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>
