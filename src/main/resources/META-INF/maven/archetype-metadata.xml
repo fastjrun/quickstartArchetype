@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor
         xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-        name="demo-parent"
+        name="basic"
         xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
@@ -11,7 +11,7 @@
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>demo-config/src</directory>
+            <directory>__rootArtifactId__-config/src</directory>
             <includes>
                 <include>**/*.xml</include>
                 <include>**/*.properties</include>
@@ -49,7 +49,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-base" dir="demo-base" name="demo-base">
+        <module id="${rootArtifactId}-base" dir="__rootArtifactId__-base" name="${rootArtifactId}-base">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -59,7 +59,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-bundle" dir="demo-bundle" name="demo-bundle">
+        <module id="${rootArtifactId}-bundle" dir="__rootArtifactId__-bundle" name="${rootArtifactId}-bundle">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -69,7 +69,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-biz" dir="demo-biz" name="demo-biz">
+        <module id="${rootArtifactId}-biz" dir="__rootArtifactId__-biz" name="${rootArtifactId}-biz">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -92,7 +92,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-provider" dir="demo-provider" name="demo-provider">
+        <module id="${rootArtifactId}-provider" dir="__rootArtifactId__-provider" name="${rootArtifactId}-provider">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -120,7 +120,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-task" dir="demo-task" name="demo-task">
+        <module id="${rootArtifactId}-task" dir="__rootArtifactId__-task" name="${rootArtifactId}-task">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -162,7 +162,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-bundle-mock" dir="demo-bundle-mock" name="demo-bundle-mock">
+        <module id="${rootArtifactId}-bundle-mock" dir="__rootArtifactId__-bundle-mock" name="${rootArtifactId}-bundle-mock">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -172,7 +172,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-provider-mock" dir="demo-provider-mock" name="demo-provider-mock">
+        <module id="${rootArtifactId}-provider-mock" dir="__rootArtifactId__-provider-mock" name="${rootArtifactId}-provider-mock">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>
@@ -200,7 +200,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-api-test" dir="demo-api-test" name="demo-api-test">
+        <module id="${rootArtifactId}-api-test" dir="__rootArtifactId__-api-test" name="${rootArtifactId}-api-test">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/test/resources</directory>
@@ -216,7 +216,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="demo-test" dir="demo-test" name="demo-test">
+        <module id="${rootArtifactId}-test" dir="__rootArtifactId__-test" name="${rootArtifactId}-test">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory></directory>

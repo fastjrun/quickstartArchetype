@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>${groupId}</groupId>
-    <artifactId>${artifactId}</artifactId>
+    <artifactId>${artifactId}-parent</artifactId>
     <packaging>pom</packaging>
     <version>${version}</version>
     <distributionManagement>
@@ -479,7 +479,7 @@
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
-        <sdkg.version>2.0</sdkg.version>
+        <sdkg.version>2.0.1</sdkg.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <reporting>

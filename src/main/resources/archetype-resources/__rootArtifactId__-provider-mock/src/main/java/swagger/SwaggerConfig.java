@@ -30,7 +30,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("${package}.mock.web.controller"))
+                        .basePackage("com.fastjrun.mock.web.controller"))
                 .paths(PathSelectors.any()).build();
 
     }
